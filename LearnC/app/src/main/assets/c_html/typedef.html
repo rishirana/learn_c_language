@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body>
+<h2>TypeDef</h2>
+<div class="box">
+	<i>The C programming language provides a keyword called <strong>typedef</strong>, which you can use to give a type, a new name. Following is an example to define a term BYTE for one-byte numbers:</i>
+</div><br>
+
+<div class="syntax">
+	typedef unsigned char BYTE;
+</div>
+<P>After this type definition, the identifier BYTE can be used as an abbreviation for the type unsigned char, for example...</P>
+<div class="state">
+	BYTE b1,b2;
+</div>
+<p>By convention, uppercase letters are used for these definitions to remind the user that the type name is really a symbolic abbreviation, but you can use lowercase, as follows −</p>
+<div class="syntax">
+	typedef unsigned char byte;
+</div>
+<p>You can use typedef to give a name to your user defined data types as well.</p>
+<h5>Example:</h5>
+<iframe src="program/structure.html" width="100%" height="545px"></iframe>
+<p>When the above code is compiled and executed, it produces the following result:</p>
+<div style="background:#212121; color:#ddd;">
+	Book  title : C Programming<br>
+Book  author : loveRishi<br>
+Book  subject : C Basic Concept<br>
+Book  book_id : 6495407
+</div>
+<h4><u>typedef Vs. #define</u></h4>
+<p><strong>#define</strong> is a C-directive which is also used to define the aliases for various data types similar to <strong>typedef</strong> but with the following differences:</p>
+<ul type="square">
+	<li><strong>typedef</strong> is limited to giving symbolic names to types only where as <strong>#define</strong> can be used to define alias for values as well, q., you can define 1 as ONE etc.</li>
+	<li><strong>typedef</strong> interpretation is performed by the compiler whereas <strong>#define</strong> statements are processed by the pre-processor.</li>
+</ul>
+<p>The following example shows how to use <strong>#define</strong> in a program:</p>
+<iframe src="program/define.html" width="100%" height="270px"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

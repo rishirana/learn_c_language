@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.if{
+			border-style: groove;
+			background-color: #bdbdbd;
+		}
+		.if ,p {
+			 padding: 5px;
+		}
+		.syntax{
+			background-color: #000000;
+			color: #fff;
+		}
+		.syntax,p{
+			 
+			padding-left: 20px;
+			font-family: arial;
+			font-size: 14px;
+		}
+		.nested{
+			background-color: #212121;
+			padding: 5px;
+		}
+		.nest{
+			background-color: #0d0d0d;
+			 
+			margin: 15px;
+			font-size: 14px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<h1>If else Statements</h1>
+<div class="if">
+	<p>It is used to execute an instruction or sequence / block of instruction only if condition is fulfilled. <i>if statement</i> expression is evaluated first then, depending on whether the value of the expression is <b>true </b> or <b>false</b> , transfers the control to the particular statement or group of statements.</p>
+</div>
+<h3>Different forms of implementation of if-statement are:</h3>
+<ul>
+	<li>Simple if statement</li>
+	<li>if-else statement</li>
+	<li>Nested if-else statement</li>
+	<li>Else if statement</li>
+</ul>
+
+<h3><u>Simple if statement</u></h3>
+<p>This is used to executed the statements only if the condition is <b>true.</b></p>
+<h3><u>Syntax-:</u></h3>
+<div class="syntax">
+ <p>if(condition)<br>{<br>
+//block of statements;<br>
+ }
+	</p>
+</div>
+
+ 
+<img src="program/if.png" width="100%">
+<h3><u>Output:</u></h3>
+<div class="syntax">
+	<p>Enter an integer : 5<br>You entered 5 which is less than 10</p>
+</div>
+<h3><u>If...else</u></h3>
+<div class="if">
+	<p>If...else statement is used when different block of statement is to be executed on condition  <b>true </b> or <b>false</b> </p>
+</div>
+
+<div class="syntax">
+ <p>if(condition)<br>{<br>
+//block 1 of statements;<br>
+ }<br>
+ else<br> //block 2 of statement;
+ <br>}
+	</p>
+</div>
+<p> if condition is true then <b>block 1</b> statement will be executed and if condition is false then <b>block 2 </b>statement will execute.</p>
+
+<h2><u>Else if Statement</u></h2>
+<div class="if">
+	<p>To show a multi-way decision based on several conditions ,we use the <b><i>else if </i></b> statement.</p>
+</div>
+<h3><u>Syntax</u></h3>
+<div class="syntax">
+	<p> if(condition_1)<br>{<br> block 1 statement;<br>}<br>
+     else if(condition_2)<br>{<br>block 2 statement;<br>}<br>
+     .<br>.<br>.<br>
+     else if(condition_n)<br>{<br>block n statement;<br>}<br>
+     else<br>{<br>block x statement;<br>}<br>
+	</p>
+</div>
+
+<p> Here , the conditions are evaluated in order from top to bottom . As soon as any condition evaluates to true , then statement associated with the given condition is executed and if all condition are false , then control is transferred to statement_x skipping the rest of the condition.</p>
+
+<h2><u>Nested if else statement</u></h2>
+<div class="if">
+	<p>You can combine multiple <b>if/if-else/if-else-if </b> ladders when a series of decisions are involved . So you can make sure that your program executes certain instructions when a series of conditions are met.</p>
+
+
+</div>
+<h3><u>Syntax</u></h3>
+<div class="nested">
+  1.
+	<div class="nest">
+		<p> if(condition)<br>{ <br> // block of statement<br>&emsp;if(condition)<br>&emsp;&emsp;{<br>&emsp;&emsp;// block of statement<br>&emsp;&emsp;}<br>}</p>
+	</div>
+	<br>
+</div>
+<br>
+<div class="nested">
+  2.
+	<div class="nest">
+		<p> if(condition)<br>{ <br> // block of statement<br>}<br>else<br>{<br>&emsp;if(condition)<br>&emsp;&emsp;{<br>&emsp;&emsp;// block of statement<br>&emsp;&emsp;}<br>else<br>{<br> // block of statement<br>&emsp;}<br>}</p>
+	</div>
+	<br>
+</div>
+</body>
+</html>

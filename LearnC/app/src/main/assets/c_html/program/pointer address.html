@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>pointer address.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #0B161D; }
+.cpp1-assembler { background-color: #0B161D; color: #FF00FF; }
+.cpp1-character { background-color: #0B161D; color: #55E439; }
+.cpp1-comment { background-color: #0B161D; color: #1E9AE0; font-style: italic; }
+.cpp1-float { background-color: #0B161D; color: #FF3A83; }
+.cpp1-hexadecimal { background-color: #0B161D; color: #FF3A83; }
+.cpp1-identifier { background-color: #0B161D; color: #FFFFFF; }
+.cpp1-illegalchar { background-color: #0B161D; color: #FB0000; }
+.cpp1-number { background-color: #0B161D; color: #FF3A83; }
+.cpp1-octal { background-color: #0B161D; color: #FF3A83; }
+.cpp1-preprocessor { background-color: #0B161D; color: #FFAA00; }
+.cpp1-reservedword { background-color: #0B161D; color: #F6F080; }
+.cpp1-space { background-color: #0B161D; color: #0B161D; }
+.cpp1-string { background-color: #0B161D; color: #55E439; }
+.cpp1-symbol { background-color: #0B161D; color: #FFAA00; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 10pt Consolas;"><span class="cpp1-preprocessor">#include &lt;stdio.h&gt;
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> </span><span class="cpp1-identifier">main</span><span class="cpp1-space"> </span><span class="cpp1-symbol">()</span><span class="cpp1-space"> </span><span class="cpp1-symbol">{
+
+</span><span class="cpp1-space">   </span><span class="cpp1-reservedword">int</span><span class="cpp1-space">  </span><span class="cpp1-identifier">var1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">   </span><span class="cpp1-reservedword">char</span><span class="cpp1-space"> </span><span class="cpp1-identifier">var2</span><span class="cpp1-symbol">[</span><span class="cpp1-number">10</span><span class="cpp1-symbol">];
+
+</span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Address of var1 : %x\n&quot;
+</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">var1</span><span class="cpp1-space">  </span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">   </span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Address of var2 : %x\n&quot;
+</span><span class="cpp1-space">   </span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">var2</span><span class="cpp1-space">  </span><span class="cpp1-symbol">);
+
+</span><span class="cpp1-space">   </span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+}
+</span></span>
+</code></pre>
+</body>
+</html>

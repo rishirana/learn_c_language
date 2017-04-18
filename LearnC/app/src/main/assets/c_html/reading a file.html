@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<h2>Reading from File</h2>
+<p>Given below is the simplest function to read a single character from a file: </p>
+<div class="syntax">
+	int fgetc(FILE *fp);
+</div>
+<p>The <strong>fgetc()</strong> function reads a character from the input file referenced by fp. The return value is the character read, or in case of any error, it returns <strong>EOF</strong>. The following function allows to read a string from a stream :</p>
+<div class="syntax">
+	char *fgetc( char *buf , int n , FILE *fp);
+</div>
+<p>The functions <strong>fgets()</strong> reads up to n-1 characters from the input stream referenced by fp.<br><br> It copies the read string into the buffer buf, appending a null character to terminate the string.</p>
+<p>If this function encounters a newline character '\n' or the end of the file EOF before they have read the maximum number of characters, then it returns only the characters read up to that point including the new line character.<br><br> You can also use int <strong> fscanf(FILE *fp, const char *format, ...)</strong> function to read strings from a file, but it stops reading after encountering the first space character.</p>
+
+<h5>Example: Read from text file using fscanf</h5>
+<iframe src="program/read file.html" width="100%" height="405px"></iframe>
+<h5>Explanation:</h5>
+<p>This program reads the integer present in the program.txt file and prints it onto the screen.<br><br>Other functions like fgetchar(), fputc() etc. can be used in similar way.</p>
+<h4>Reading from Binary File:</h4>
+<p>Function fread() also take 4 arguments similar to fwrite() function.</p>
+<div class="syntax">
+	fread( address_data , size_data , numbers_data , pointer_to_file );
+</div>
+<h5>Example:Reading from binary file using fread</h5>
+<iframe src="program/read binary file.html" width="100%", height="580px"></iframe>
+<h5>Explanation:</h5>
+<p>In this program, you read the same file program.bin and loop through the records one by one.<br><br>
+
+In simple terms, you read one threeNum record of threeNum size from the file pointed by <strong>*fptr</strong> into the structure num.</p>
+</body>
+</html>

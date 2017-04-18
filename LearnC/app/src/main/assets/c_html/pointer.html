@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body>
+<h2>Pointers</h2>
+<div class="box">
+	<i>Pointers in C are easy and fun to learn. Some C programming tasks are performed more easily with pointers, and other tasks, such as dynamic memory allocation, cannot be performed without using pointers. So it becomes necessary to learn pointers to become a perfect C programmer.</i>
+</div>
+<p>As you know, every variable is a memory location and every memory location has its address defined which can be accessed using ampersand (&) operator, which denotes an address in memory. Consider the following example, which prints the address of the variables defined:</p>
+
+<h5>Example:</h5>
+<iframe src="program/pointer address.html" width="100%" height="270px"></iframe>
+<h5>Output:</h5>
+<div class="output">
+	Address of var1 : bff5a400<br>
+Address of var2 : bff5a3f6
+</div>
+<h3>What are Pointers?</h3>
+<p>A pointer is a variable whose value is the address of another variable, i.e., direct address of the memory location. Like any variable or constant, you must declare a pointer before using it to store any variable address.</p>
+<h4>syntax:</h4>
+<div class="syntax">
+	type *var_name;
+</div>
+<h5>Explanation:</h5>
+<p>Here, type is the pointer's base type; it must be a valid C data type and var-name is the name of the pointer variable. The asterisk * used to declare a pointer is the same asterisk used for multiplication. However, in this statement the asterisk is being used to designate a variable as a pointer.</p>
+
+<div class="state">
+	int    *ip;    /* pointer to an integer */<br>
+double *dp;    /* pointer to a double */<br>
+float  *fp;    /* pointer to a float */<br>
+char   *ch     /* pointer to a character */<br>
+</div>
+<h3>How to Use Pointer?</h3>
+<p>There are a few important operations, which we will do with the help of pointers very frequently.</p>
+<ol type="a">
+	<li>We define a pointer variable.</li>
+	<li>assign the address of a variable to a pointer.</li>
+	<li>finally access the value at the address available in the pointer variable.</li>
+</ol>
+<h5>Example:</h5>
+<iframe src="program/pointer.html" width="100%" height="470px"></iframe>
+
+<h5>Output:</h5>
+<div class="output">
+	Address of var : bffd8b3c<br>
+Address stored in ip : bffd8b3c<br>
+Value of *ip : 20
+</div>
+
+
+
+
+
+</body>
+</html>

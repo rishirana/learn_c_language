@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>queue using linked list.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+.cpp1-assembler { background-color: #FFFFFF; color: #0000FF; }
+.cpp1-character { background-color: #FFFFFF; color: #000000; }
+.cpp1-comment { background-color: #FFFFFF; color: #3399FF; font-style: italic; }
+.cpp1-float { background-color: #FFFFFF; color: #800080; }
+.cpp1-hexadecimal { color: #800080; }
+.cpp1-identifier { color: #000000; }
+.cpp1-illegalchar { color: #000000; }
+.cpp1-number { color: #800080; }
+.cpp1-octal { color: #800080; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { background-color: #FFFFFF; color: #808000; font-weight: bold; }
+.cpp1-space { background-color: #FFFFFF; color: #000000; }
+.cpp1-string { color: #0000FF; font-weight: bold; }
+.cpp1-symbol { color: #FF0000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 11pt Courier New;"><span class="cpp1-comment">/*
+   ***************************  
+  Name: Learn c Programming  
+  Written by ~LoveRishi~
+   ***************************
+                               */
+
+</span><span class="cpp1-preprocessor">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> node
+</span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> info</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> node </span><span class="cpp1-symbol">*</span><span class="cpp1-identifier">ptr</span><span class="cpp1-symbol">;
+}*</span><span class="cpp1-identifier">front</span><span class="cpp1-symbol">,*</span><span class="cpp1-identifier">rear</span><span class="cpp1-symbol">,*</span><span class="cpp1-identifier">temp</span><span class="cpp1-symbol">,*</span><span class="cpp1-identifier">front1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> frontelement</span><span class="cpp1-symbol">();
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> enq</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> data</span><span class="cpp1-symbol">);
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> deq</span><span class="cpp1-symbol">();
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> empty</span><span class="cpp1-symbol">();
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> display</span><span class="cpp1-symbol">();
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> create</span><span class="cpp1-symbol">();
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> queuesize</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> count </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> main</span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> no</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> ch</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> e</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space"> 
+    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n 1 - Enque&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n 2 - Deque&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n 3 - Front element&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n 4 - Empty&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n 5 - Exit&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n 6 - Display&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n 7 - Queue size&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    create</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">while</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-number">1</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n Enter choice : &quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">ch</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">switch</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ch</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter data : &quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">no</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            enq</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">no</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">2</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            deq</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">3</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            e </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> frontelement</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">e </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">                printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Front element : %d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> e</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">                printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n No front element in Queue as queue is empty&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">4</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            empty</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">5</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            exit</span><span class="cpp1-symbol">(</span><span class="cpp1-number">0</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">6</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            display</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">7</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            queuesize</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">default</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Wrong choice, Please enter correct choice  &quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+}
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-comment">/* Create an empty queue */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> create</span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    front </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> rear </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">;
+}
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-comment">/* Returns queue size */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> queuesize</span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n Queue size : %d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> count</span><span class="cpp1-symbol">);
+}
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-comment">/* Enqueing the queue */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> enq</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> data</span><span class="cpp1-symbol">)
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">rear </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        rear </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> node </span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">malloc</span><span class="cpp1-symbol">(</span><span class="cpp1-number">1</span><span class="cpp1-symbol">*</span><span class="cpp1-reservedword">sizeof</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> node</span><span class="cpp1-symbol">));
+</span><span class="cpp1-space">        rear</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">ptr </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        rear</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">info </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> data</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        front </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> rear</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        temp</span><span class="cpp1-symbol">=(</span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> node </span><span class="cpp1-symbol">*)</span><span class="cpp1-identifier">malloc</span><span class="cpp1-symbol">(</span><span class="cpp1-number">1</span><span class="cpp1-symbol">*</span><span class="cpp1-reservedword">sizeof</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> node</span><span class="cpp1-symbol">));
+</span><span class="cpp1-space">        rear</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">ptr </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> temp</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        temp</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">info </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> data</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        temp</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">ptr </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space"> 
+        rear </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> temp</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    count</span><span class="cpp1-symbol">++;
+}
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-comment">/* Displaying the queue elements */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> display</span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    front1 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> front</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space"> 
+    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">((</span><span class="cpp1-identifier">front1 </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">rear </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">))
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Queue is empty&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">return</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">while</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">front1 </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> rear</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d &quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> front1</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">info</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        front1 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> front1</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">ptr</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">front1 </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> rear</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">        printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> front1</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">info</span><span class="cpp1-symbol">);
+}
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-comment">/* Dequeing the queue */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> deq</span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    front1 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> front</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space"> 
+    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">front1 </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n Error: Trying to display elements from empty queue&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">return</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">front1</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">ptr </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">            front1 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> front1</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">ptr</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">            printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n Dequed value : %d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> front</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">info</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            free</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">front</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            front </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> front1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">            printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n Dequed value : %d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> front</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">info</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            free</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">front</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">            front </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">            rear </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">        count</span><span class="cpp1-symbol">--;
+}
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-comment">/* Returns the front element of queue */
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> frontelement</span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">((</span><span class="cpp1-identifier">front </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">rear </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">))
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">return</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">front</span><span class="cpp1-symbol">-&gt;</span><span class="cpp1-identifier">info</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+}
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-comment">/* Display if queue is empty or not */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> empty</span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">     </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">((</span><span class="cpp1-identifier">front </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;&amp;</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">rear </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> NULL</span><span class="cpp1-symbol">))
+</span><span class="cpp1-space">        printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n Queue empty&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">       printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Queue not empty&quot;</span><span class="cpp1-symbol">);
+}
+</span></span>
+</code></pre>
+</body>
+</html>

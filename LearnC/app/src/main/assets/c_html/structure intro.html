@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<h2>Structure</h2>
+<div class="box">
+	<i>Arrays allow to define type of variables that can hold several data items of the same kind. Similarly structure is another user defined data type available in C that allows to<u> combine data items of different kinds</u></i>
+</div>
+<p>Structure is a user-defined data type in C which allows you to combine different data types to store a particular type of record. Structure helps to construct a complex data type in more meaningful way. </p>
+<P>Structure is used to represent a record. Suppose you want to store record of <strong>Student</strong> which consists of student name, address, roll number and age. You can define a structure to hold this information. </P>
+<h4>Defining Structure:</h4>
+<p><strong>struct</strong> keyword is used to define a structure. struct define a new data type which is a collection of different type of data.</p>
+<div class="syn">
+	<span class="strct"><strong>struct</strong></span> <span style="color:pink;"> structure_name</span><br>
+<span class="braces">{</span><br>
+ <span style="color:lightgreen;">//Statements</span><br>
+<span class="braces">}</span>;
+</div>
+<h5>Example:</h5>
+<div class="syn">
+<span class="strct"><strong>struct</strong></span><span style="color:pink;"> Book</span><br>
+<span class="braces">{</span><br>
+ <span class="datatype">char</span> <span class="variable">name[15];</span><br>
+ <span class="datatype">int</span> <span class="variable">price;</span><br>
+ <span class="datatype">int</span> <span class="variable">pages;</span><br>
+<span class="braces">}</span>;
+</div>
+<h5>Explanation:</h5>
+<p>Here the <strong>struct Book</strong> declares a structure to hold the details of book which consists of three data fields, namely name, price and pages. These fields are called <strong>structure elements or members.</strong> Each member can have different data type,like in this case, <strong>name</strong> is of <mark>char</mark> type and <strong>price</strong> is of <mark>int</mark> type etc. Book is the name of the structure and is called structure tag. </p>
+<h4>Declaring Structure variable:</h4>
+<p>It is possible to declare variables of a structure, after the structure is defined. Structure variable declaration is similar to the declaration of variables of any other data types. Structure variables can be declared in following two ways.</p>
+
+	<strong>&star;Declaring Structure variable separately</strong><br>
+
+<div class="syn">
+	<span class="strct"><strong>struct</strong></span> <span style ="color:pink;">Student</span><br>
+<span class="braces">{</span><br>
+ <span class="datatype">char[20]</span> <span class="variable"> name;</span><br>
+ <span class="datatype"> int</span> <span class="variable"> age;</span><br>
+ <span class="datatype"> int</span> <span class="variable"> rollno;</span><br> 
+<span class="braces">}</span>;<br>
+
+<span class="strct"><strong> struct</strong></span> <span style="color:pink;"> Student</span> <span class="variable"> S1 , S2;</span>   <span style="color:#4caf50;"> //declaring variables of Student</span>
+</div>
+
+
+	<strong>&star;Declaring Structure variable with structure definition</strong><br>
+
+<div class="syn">
+	<span class="strct"><strong>struct</strong></span> <span style ="color:pink;">Student</span><br>
+<span class="braces">{</span><br>
+ <span class="datatype">char[20]</span> <span class="variable"> name;</span><br>
+ <span class="datatype"> int</span> <span class="variable"> age;</span><br>
+ <span class="datatype"> int</span> <span class="variable"> rollno;</span><br> 
+<span class="braces">}</span> <span class="variable"> S1 , S2;</span>;
+
+ 
+</div>
+<h4>Accessing Structure Members:</h4>
+<p>Structure members can be accessed and assigned values in number of ways.<br><br> Structure member has no meaning independently. In order to assign a value to a structure member, the member name must be linked with the structure variable using dot . operator also called period or member access operator. </p>
+
+
+<div class="syn">
+	<span class="strct"><strong>struct</strong></span> <span style ="color:pink;">Book</span><br>
+<span class="braces">{</span><br>
+ <span class="datatype">char</span> <span class="variable"> name[15];</span><br>
+ <span class="datatype"> int</span> <span class="variable"> price;</span><br>
+ <span class="datatype"> int</span> <span class="variable"> pages;</span><br> 
+<span class="braces">}</span> <span class="variable">b1,b2;</span> <br>
+
+<span style="color:#ba68c8;"> b1.price = 200;</span>   <span style="color:#4caf50;"> <i>//b1 is variable of Book type and price is member of Book</i></span>
+</div>
+<p>We can also use <strong>scanf()</strong> to give values to structure members through terminal.</p>
+<div class="syn">
+	<p style="color:#dddddd;">scanf(" %s ", b1.name);<br>
+scanf(" %d ", &b1.price);</p>
+</div>
+</body>
+</html>

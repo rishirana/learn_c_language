@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<h2>Writing into File</h2>
+<h4>Opening Files:</h4>
+<p>Opening a file is performed using the library function in the "stdio.h" header file: fopen().<br>
+
+The syntax for opening a file in standard I/O is:</p>
+<div class="syntax">
+	ptr = fopen("fileopen","mode")
+
+</div><br>
+<strong>Example:</strong>
+<br>
+<div class="box">
+	<P>fopen("E:\\cprogram\\newprogram.txt","w");<br><br>
+
+fopen("E:\\cprogram\\oldprogram.bin","rb");</P>
+</div>
+<ul type="circle">
+	<li>Let's suppose the file newprogram.txt doesn't exist in the location E:\cprogram. The first function creates a new file named newprogram.txt and opens it for writing as per the mode 'w'.<br>The writing mode allows you to create and edit (overwrite) the contents of the file.</li>
+	<li>Now let's suppose the second binary file <small><strong>oldprogram.bin</strong></small> exists in the location E:\cprogram. The second function opens the existing file for reading in binary mode 'rb'.<br>The reading mode only allows you to read the file, you cannot write into the file.</li>
+</ul>
+<table>
+	<tr>
+		<th>File Mode</th>
+		<th>Meaning of Mode</th>
+		<th>During Inexistance of File</th>
+	</tr>
+	<tr>
+		<td>r</td>
+		<td>Open for reading</td>
+		<td>If the file does not exist, fopen() returns NULL.</td>
+	</tr>
+	<tr>
+		<td>w</td>
+		<td>Open for writing.</td>
+		<td>If the file exists, its contents are overwritten. If the file does not exist, it will be created.</td>
+	</tr>
+	<tr>
+		<td>a</td>
+		<td>Open for append. i.e, Data is added to end of file.</td>
+		<td>If the file does not exists, it will be created.</td>
+	</tr>
+	<tr>
+		<td>r+</td>
+		<td>Open for both reading and writing.</td>
+		<td>If the file does not exist, fopen() returns NULL.</td>
+	</tr>
+	<tr>
+		<td>w+</td>
+		<td>Open for both reading and writing.</td>
+		<td>If the file exists, its contents are overwritten. If the file does not exist, it will be created.</td>
+	</tr>
+	<tr>
+		<td>a+</td>
+		<td>Open for both reading and appending.</td>
+		<td>If the file does not exists, it will be created.</td>
+	</tr>
+	
+
+</table>
+ <p>If you are going to handle binary files ,then you will use following access modes instead of the above mentioned ones:</p>
+ <div class="box">
+ 	'rb' , 'wb' , 'ab' , 'rb+' , 'r+b' , 'wb+' , 'w+b' , 'ab+' , 'a+b'
+ </div>
+ <h4>Closing a File:</h4>
+ <p>The file (both text and binary) should be closed after reading/writing.<br>
+
+Closing a file is performed using library function fclose().</p>
+<div class="syntax">
+	fclose(fptr); //fptr is the file pointer associated with file to be closed.
+</div>
+<p>The fclose(-) function returns zero on success, or EOF if there is an error in closing the file. This function actually flushes any data still pending in the buffer to the file, closes the file, and releases any memory used for the file. The EOF is a constant defined in the header file <strong>stdio.h.</strong>
+
+</p>
+<h4>Writing a File:</h4>
+<h5>Example: writing to a text file using fprintf</h5>
+<iframe src="program/writing to file.html" width="100%" height="385px"></iframe>
+<h5>Explanation:</h5>
+<p>This program takes a number from user and stores in the file program.txt.<br><br>
+
+After you compile and run this program, you can see a text file program.txt created in C drive of your computer. When you open the file, you can see the integer you entered.</p>
+<h4>Writing to Binary File:</h4>
+<p>To write into a binary file, you need to use the function fwrite(). The functions takes four arguments: Address of data to be written in disk, Size of data to be written in disk, number of such type of data and pointer to the file where you want to write.</p>
+<div class="syntax">
+	fwrite(address_data , size_data , numbers_data , pointer_to_file);
+</div>
+<h5>Example:writing to binary file using fwrite</h5>
+<iframe src="program/writing to binary file.html" width="100%" height="600px"></iframe>
+<h5>Explanation:</h5>
+<p>In this program, you create a new file program.bin in the C drive.<br><br>
+
+We declare a structure threeNum with three numbers - n1, n2 and n3, and define it in the main function as num.<br><br>
+
+Now, inside the for loop, we store the value into the file using fwrite.<br><br>
+
+The first parameter takes the address of num and the second parameter takes the size of the structure threeNum.<br><br>
+
+Since, we're only inserting one instance of num, the third parameter is 1. And, the last parameter *fptr points to the file we're storing the data.<br><br>
+
+Finally, we close the file.</p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="info.rishi.learnc">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".TheoryActivity"
+            android:label="@string/title_activity_theory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Term" />
+        <activity
+            android:name=".ProgramActivity"
+            android:label="@string/title_activity_program"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Web"
+            android:label="@string/title_activity_web"
+            android:theme="@style/AppTheme.NoActionBar" />
+        //splash screen activity
+        <activity
+            android:name=".SplashActivity"
+            android:label="Learn C"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Feedback"></activity>
+    </application>
+
+</manifest>

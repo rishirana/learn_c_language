@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table ,th,td{
+			border:  hidden;
+			background-color: #eeeeee;
+		}
+	th{
+		    text-align: left;
+		}
+	</style>
+</head>
+<body>
+<h1>Operators-:</h1>
+<p>An operator is a symbol that tells the compiler to perform specific mathematical or logical functions. C language is rich in built-in operators and provides the following types of operators </p>
+<ul>
+	<li>Arithmetic Operator</li>
+	<li>Relational Operator</li>
+	<li>Logical Operator</li>
+	<li>Assignment Operator</li>
+	<li>Increment and Decrement Operator</li>
+	<li>Conditional Operator</li>
+	<li>Bitwise Operator</li>
+	<li>Special Operator</li>
+</ul>
+<h2>Arithmetic Operator</h2>
+<p>An arithmetic  operator performs mathematical operations such as addition,subtraction and multiplication on numerical values(constant and variables).</p>
+<table style="width:100%">
+	<tr>
+		<th>
+			Operator
+		</th>
+		<th>Meaning of Operator</th>
+	</tr>
+	<tr>
+		<td>+</td>
+		<td>addition or unary plus</td>
+	</tr>
+	<tr>
+		<td>-</td>
+		<td>subtraction or unary minus</td>
+	</tr><tr>
+		<td>*</td>
+		<td>multiplication</td>
+	</tr><tr>
+		<td>/</td>
+		<td>division</td>
+	</tr><tr>
+		<td>%</td>
+		<td>remainder after division(modulo division)</td>
+	</tr>
+</table>
+<h2>Relational Operator</h2>
+<p>A relational operator checks the relationship between two operands. if the relation is true, it returns 1; if the relation is false , it returns value 0.</p>
+<p>Relational operators are used in decision making and loops</p>
+<table style="width:100%">
+	<tr>
+		<th>
+			Operator
+		</th>
+		<th>Meaning of Operator</th>
+		<th>Example</th>
+	</tr>
+	<tr>
+		<td>==</td>
+		<td>Equal to </td>
+		<td>2==3 returns 0</td>
+	</tr>
+	<tr>
+		<td>></td>
+		<td>greater than </td>
+		<td>4>2 return 1</td>
+	</tr><tr>
+		<td><</td>
+		<td>less than </td>
+		<td>4< 2 return 0 </td>
+	</tr><tr>
+		<td>!=</td>
+		<td>not equal to </td>
+		<td>4!=2 returns 1</td>
+    
+	</tr><tr>
+
+		<td>>=</td>
+		<td>Greater than or equal to </td>
+		<td>4>=3 return 1</td>
+	</tr>
+	<tr>
+		<td><= </td>
+		<td>less than or equal to</td>
+		<td>4<=2 return 0</td>
+	</tr>
+</table>
+<h2>Logical Operator</h2>
+<p>An expression containing logical operator returns either 0 or 1 depending upon wheather expression results true or false . Logical operators are commonly used in decision making in c programming.</p>
+<table style="width:100%">
+	<tr>
+		<th>
+			Operator
+		</th>
+		<th>Meaning of Operator</th>
+	</tr>
+	<tr>
+		<td>&&</td>
+		<td>Logical AND. True only if all operands are true.</td>
+	</tr>
+	<tr>
+		<td>||</td>
+		<td>Logical OR. True only if either one operand is true.</td>
+	</tr><tr>
+		<td>!</td>
+		<td>Logical NOT. True only if the operand is 0</td>
+	</tr>
+
+</table>
+<h2>Assignment Operator</h2>
+<p>An assignment operator is used for assigning a value to a variable. The most common assignment operator is equal to (=)</p>
+<h2>Short Hand Operator</h2>
+<table style="width:100%">
+	<tr>
+		<th>
+			Operator
+		</th>
+		<th>Example</th>
+		<th>Same As</th>
+	</tr>
+	<tr>
+		<td>=</td>
+		<td>a=b  </td>
+		<td>a=b</td>
+	</tr>
+	<tr>
+		<td>+=</td>
+		<td>a+=b </td>
+		<td>a=a+b</td>
+	</tr><tr>
+		<td>-=</td>
+		<td>a-=b </td>
+		<td>a=a-b </td>
+	</tr><tr>
+		<td>*=</td>
+		<td>a*=b </td>
+		<td>a=a*b</td>
+    
+	</tr><tr>
+
+		<td>/=</td>
+		<td>a/=b </td>
+		<td>a=a/b</td>
+	</tr>
+	<tr>
+		<td>%=</td>
+		<td>a%=b</td>
+		<td>a=a%b</td>
+	</tr>
+</table>
+<h2>Icrement & Decrement Operator</h2>
+<p>C programming has two operators increment (++) and decrement(--) to change the value of an operand (constant or variable) by 1</p>
+<p>Increment (++) increases the value by 1 whereas decrement (--) decreases the value by 1. These two operators are unary operators , meaning they only operate on a single operand.</p>
+<h2>Conditional operator</h2>
+<div class="condi">
+	conditional Expression ? expression1 : expression2
+</div>
+<p>The conditional operator works as follows:</p>
+<ul>
+	<LI>The first Expression <i>conditionalExpression </i>is evaluated at first. This expression evaluates to 1 if it's true and evaluates to 0 if it's false.</LI>
+	<li>If <i>conditionalExpression </i> true , <i>expression1 </i>is evaluated.</li>
+	<li>If <i>conditionalExpression </i> false , <i>expression2 </i>is evaluated.</li>
+</ul>
+<h2>Bitwise Operator</h2>
+<p>In processor, mathematical operations like: addition, subtraction,and division are done in bit-level which makes processing faster and saves power</p>
+<p>Bitwise operators are used in C programming to perform bit-level operations.</p>
+<table>
+	<tr>
+		<th>
+			Operators
+		</th>
+		<th>Meaning of operators</th>
+		<tr>
+		<td>&</td>
+		<td>Bitwise AND</td>
+	</tr>
+	 
+	<tr>
+		<td>|</td>
+		<td>Bitwise OR</td>
+	</tr>
+	<tr>
+		<td>^</td>
+		<td>Bitwise exclusive OR</td>
+	</tr>
+	<tr>
+		<td>~</td>
+		<td>Bitwise complement</td>
+	</tr>
+	<tr>
+		<td><<</td>
+		<td>Shift left</td>
+	</tr>
+	<tr>
+		<td>>></td>
+		<td>Shift right</td>
+	</tr>
+	<hr>
+</table>
+<h2>Special Operator</h2>
+<h5>Comma Operator</h5>
+<p>Comma operators are used to link related expressions together.</p>
+<h5>sizeof operator</h5>
+<p>The sizeof operator is an unary operator which returns the size of data (constant,variables,array , structures etc.).</p>
+<h5>Other Operator</h5>
+<p>Other operators such as & (reference operator ), * (dereference operator) and -> (member selection) operator will be discussed in C pointers.</p>
+<table>
+	<tr>
+		<th>Operator </th>
+		<th>Description</th>
+		<th>Example</th>
+
+	</tr>
+	<tr>
+		<td>sizeof</td>
+		<td>Returns the size of an variable </td>
+		<td><b>sizeof(x)</b>return size of variable  x </td>
+	</tr>
+	<tr>
+		<td>&</td>
+		<td>Returns the address of an variable </td>
+		<td><b>&x;</b>return address of variable  x </td>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td>Pointer to variable  </td>
+		<td><b>*x;</b> will be pointer to variable   x </td>
+	</tr>
+</table>
+</body>
+</html>

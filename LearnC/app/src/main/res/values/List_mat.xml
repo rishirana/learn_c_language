@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/tools">
+
+    <string-array name="overviews">
+        <item>Structure of C</item>
+        <item>compilation</item>
+        <item>Nomenclature</item>
+        <item>DataTypes</item>
+        <item>Operators</item>
+        <item>Qualifiers</item>
+    </string-array>
+    <string-array name="control">
+        <item> If...else Statements</item>
+        <item>Switch Statements</item>
+        <item>GOTO Statements</item>
+        <item>While Loop</item>
+        <item>Do While Loops</item>
+        <item>For Loop</item>
+        <item>Nesting of Loops</item>
+        <item>Continue &amp; Break Statements</item>
+    </string-array>
+    <string-array name="array">
+        <item>Arrays(1D)</item>
+        <item>2D Arrays</item>
+        <item>Multidimension Array</item>
+        <item>Passing Arrays to Function</item>
+    </string-array>
+    <string-array name="function">
+        <item>Functions</item>
+        <item>Function Calls</item>
+        <item>Type of Function</item>
+        <item>Recursion</item>
+        <item>Storage Class</item>
+
+    </string-array>
+    <string-array name="strings">
+        <item>String</item>
+        <item>String Functions</item>
+        <item>Input Formating</item>
+        <item>Output Formating</item>
+    </string-array>
+    <string-array name="File">
+        <item>File Handling Concept</item>
+        <item>Reading from a File </item>
+        <item>Writing to a File</item>
+
+    </string-array>
+    <string-array name="structures">
+        <item>Structure</item>
+        <item>Unions</item>
+        <item>TypeDef</item>
+        <item>Enum</item>
+        <item>Array within Structures</item>
+        <item>Array of Structures</item>
+        <item>Nested Stuctures</item>
+    </string-array>
+    <string-array name="pointer">
+        <item>Pointers </item>
+        <item>Pointer Address</item>
+        <item>Pointer with Functions</item>
+        <item>Pointer Approach to Arrays</item>
+        <item>Pointer Approach to Structures</item>
+    </string-array>
+    <!--<string-array name="dynamiclist">-->
+        <!--<item>Data structures</item>-->
+        <!--<item>Linked List</item>-->
+        <!--<item>Doubly Linked List</item>-->
+        <!--<item>Trees</item>-->
+        <!--<item>Hash Tables</item>-->
+        <!--<item>Preprocessor Directives</item>-->
+    <!--</string-array>-->
+
+
+    <string-array name="basics">
+        <item>Hello World</item>
+        <item>Integer Input</item>
+        <item>Strings Basic</item>
+        <item>Arithmetic Operations</item>
+        <item>Area &amp; Circumference of Circle</item>
+        <item>Odd or Even</item>
+        <item>Size of Variables</item>
+        <item>Sum of Integers</item>
+        <item>Celsius to Fahrenheit Conversion > </item>
+        <item>Sum of Even &amp; Odd No.</item>
+        <item>Sum of +ve &amp; -ve No.</item>
+        <item>ASCII Codes</item>
+    </string-array>
+
+    <string-array name="numbers">
+        <item>Greatest among 3</item>
+        <item>Factorial of Number</item>
+        <item>Swapping of Two No.</item>
+        <item>HCF &amp; LCM</item>
+        <item>Reverse of a Number</item>
+        <item>Sum of Digits</item>
+        <item>Palindrome </item>
+        <item>Armstrong Number</item>
+        <item>Quadratic Roots</item>
+        <item>Prime Numbers</item>
+        <item>Random Number Generator</item>
+        <item>Leap Year</item>
+        <item>Exponential Power</item>
+    </string-array>
+
+    <string-array name="strngs">
+        <item>Vowels</item>
+        <item>String Length</item>
+        <item>Comparing String</item>
+        <item>Copying String</item>
+        <item>Concatenating Strings</item>
+        <item>Substring</item>
+        <item>String to LowerCase </item>
+        <item>Counting vowels in a string</item>
+        <item>Palindrome </item>
+        <item>String to Integer</item>
+        <item>Sorting String</item>
+        <item>Removing Spaces from String</item>
+        <item>Frequency of Characters</item>
+    </string-array>
+
+    <string-array name="Arry">
+        <item>Smallest Element of Array</item>
+        <item>Greatest Element of Array</item>
+        <item>Reversing an Array</item>
+        <item>Duplicating an Array</item>
+        <item>Merging Arrays</item>
+        <item>Binary Sort</item>
+        <item>Insertion Sort</item>
+        <item>Selection Sort</item>
+        <item>Linear Search > </item>
+        <item>Inserting Element into Array</item>
+        <item>Deleting Element from Array</item>
+        <item>Stack Using Array</item>
+        <item>Standard Deviation Calculation</item>
+    </string-array>
+
+    <string-array name="matrix">
+        <item>Addition of Two Matrix</item>
+        <item>Subtraction of Two Matrix</item>
+        <item>Multiplication of Two Matrix</item>
+        <item>Transpose of a Matrix</item>
+        <item>Sum of Elements of Matrix</item>
+        <item>Sum of Lower Triangle</item>
+        <item>Sum of Upper Triangle</item>
+        <item>Identity Matrix</item>
+        <item>Square Table > </item>
+        <item>Magic Square</item>
+
+    </string-array>
+
+    <string-array name="pattern">
+        <item>Binary Pattern</item>
+        <item>Diamond</item>
+        <item>Diamond Star Outline</item>
+        <item>Floyds Triangle</item>
+        <item>Hollow Diamond</item>
+        <item>Hollow Square</item>
+        <item>Horglass Pattern</item>
+        <item>Nested Star-Hash Pyramid > </item>
+        <item>Pascals Traingle</item>
+        <item>Reverse Star Triangle</item>
+        <item>Rhombus Pattern</item>
+        <item>Triangle with only Border</item>
+        <item>X Pattern</item>
+        <item>Heart Pattern</item>
+
+
+    </string-array>
+
+    <string-array name="fileHandling">
+        <item>Viewing List of Files</item>
+        <item>Reading from a File</item>
+        <item>Deletin from File</item>
+        <item>Copying File</item>
+        <item>Characters Counting </item>
+        <item>Merging Files</item>
+        <item>Reversing File Content</item>
+    </string-array>
+
+    <string-array name="pntrs">
+        <item>Add two number using Pointer</item>
+        <item>Array of Char Pointer</item>
+        <item>Array of int Pointer</item>
+        <item>Decrementing a Pointer</item>
+        <item>Incrementing a Pointer</item>
+        <item>NULL  Pointer</item>
+        <item>Pointer to Function</item>
+        <item>Pointer to Pointer</item>
+        <item>Pointer &amp; Structures  </item>
+
+
+    </string-array>
+
+    <string-array name="strctrs">
+        <item>Simple Structure</item>
+        <item>Array of Structure</item>
+        <item>Distance Conversion</item>
+        <item>Union</item>
+        <item>stack</item>
+        <item>Queue</item>
+        <item>Dynamic Memory Allocations</item>
+        <item>Simple Linked List</item>
+        <item>Doubly Linked List</item>
+        <item>Reversing Linked List</item>
+        <item>Queue Using Linked List</item>
+
+    </string-array>
+
+    <string-array name="conversion">
+        <item>Binary to Decimal</item>
+        <item>Decimal to Binary</item>
+        <item>Binary to Hexadecimal</item>
+        <item>Binary to Octal</item>
+        <item>Decimal to Roman</item>
+        <item>Decimal to Hexadecimal</item>
+        <item>Decimal to Octal</item>
+        <item>Octal to Binary</item>
+        <item>Octal to Decimal</item>
+        <item>Hexadecimal to Binary </item>
+        <item>Roman to Decimal</item>
+
+    </string-array>
+
+    <string-array name="Extras">
+        <item>Displaying Calender</item>
+        <item>Binary Multiplication</item>
+        <item>Binary Addition</item>
+        <item>Viewing Current Date</item>
+        <item>Getting IP Address</item>
+        <item>Turning of Computer</item>
+
+
+
+    </string-array>
+    <string-array name="loop">
+        <item>For Loop</item>
+        <item>While Loop</item>
+        <item>Nested Loop</item>
+        <item>Loop Break</item>
+        <item>Do While Loop</item>
+        <item>Even and Odd Printing using &amp; operator and Loop</item>
+
+
+    </string-array>
+
+    <string-array name="recursion">
+        <!--<item>Add two number using Recursion</item>-->
+        <item>Sum of \'n\' number using Recursion</item>
+        <item>Calculate power of \'n\' using recursion</item>
+        <item>Check a number is prime of not by recursion</item>
+        <item>Fibonacci series using Recursion</item>
+        <item>Find factorial of number using Recursion</item>
+        <item>Palindrome using Recursion</item>
+        <item>Find Largest element of an array by recursion</item>
+        <item>GCD of two number by recursion</item>
+        <item>LCM of two numbes by recursion</item>
+
+
+    </string-array>
+
+</resources>

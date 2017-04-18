@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body>
+<h2>File Handling</h2>
+<div class="state">
+	<i>A file represents a sequence of bytes. regardless of its being a text file or a binary file. C prgramming language provides access on high level functions as well as low level (OS level) calls to handle file on your storage devices. </i>
+
+</div>
+<p>In C programming, file is a place on disk where a group of related data is stored. </p>
+<h3>Why Files are Needed ?</h3>
+<p>When the program is terminated, the entire data is lost in C programming. If you want to keep large volume of data, it is time consuming to enter the entire data. But  if file is created , these information can be accessed using few commands.</p>
+<p>There are large numbers of functions to handle file I/O in C language . In this tutorial , you will learn to handle standard I/O (High level file I/O functions) in C.</p>
+<p><strong>High level file I/O functions can be categorized as :</strong></p>
+<ol>
+	<li><strong>Text File </strong></li>
+	<li><strong>Binary File</strong></li>
+</ol>
+<h4>Text File:</h4>
+<p>Text files are the normal .txt files that you can easily create using Notepad or any simple text editors.</p>
+<p>When you open those files, you'll see all the contents within the file as plain text. You can easily edit or delete the contents.</p>
+<p>They take minimum effort to maintain, are easily readable, and provide least security and takes bigger storage space.</p>
+<h4>Binary File:</h4>
+<p>Binary files are mostly the .bin files in your computer.</p>
+<p>Instead of storing data in plain text, they store it in the binary form (0's and 1's).</p>
+<p>They can hold higher amount of data, are not readable easily and provides a better security than text files.</p>
+<h3>File Operations:</h3>
+<ol>
+	<li>Creating a new file</li>
+	<li>Opening an existing file</li>
+	<li>Reading from and writing information to a file</li>
+	<li>Closing a file</li>
+</ol>
+<h4>Working with File:</h4>
+<p>While working with file, you need to declare a <strong>pointer</strong> of type file. This declaration is needed for communication between file and program.</p>
+<div class="syntax">
+	FILE *ptr;
+</div>
+<h3>File Handling Functions:</h3>
+<p>C provides a number of functions that helps to perform basic file operations. Following are the functions</p>
+
+<table>
+	<tr>
+		<th>Function</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>fopen()</td>
+		<td>create a new file or open a existing file</td>
+	</tr>
+	<tr>
+		<td>fclose()</td>
+		<td>closes a file</td>
+	</tr>
+	<tr>
+		<td>getc()</td>
+		<td>reads a character from a file</td>
+	</tr>
+	<tr>
+		<td>putc()</td>
+		<td>write a character to file</td>
+	</tr>
+	<tr>
+		<td>fscanf()</td>
+		<td>reads a set of data from  file</td>
+	</tr>
+	<tr>
+		<td>fprintf()</td>
+		<td>writes a set of data to a file</td>
+	</tr>
+	<tr>
+		<td>getw()</td>
+		<td>reads a integer from  file</td>
+	</tr>
+	<tr>
+		<td>putw()</td>
+		<td>writes a integer to  file</td>
+	</tr>
+	<tr>
+		<td>fseek()</td>
+		<td>set the position to desire point</td>
+	</tr>
+	<tr>
+		<td>ftell()</td>
+		<td>give current position in the  file</td>
+	</tr>
+	<tr>
+		<td>rewind()</td>
+		<td>set the position to the begining point</td>
+	</tr>
+</table>
+</body>
+</html>

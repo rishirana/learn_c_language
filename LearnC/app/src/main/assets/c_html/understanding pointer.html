@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<h2>Pointer Address</h2>
+<div class="box">
+	<i>Pointers are powerful features of C and (C++) programming that differentiates it from other popular programming languages like: Java and Python.Pointers are used in C program to access the memory and manipulate the address.
+</i>
+</div>
+<h4>Reference Operator(&):</h4>
+<p>If you have a variable var in your program, &var will give you its address in the memory, where & is commonly called the reference operator.</p>
+<h5>Example:</h5>
+<div class="syn">
+	<span style="color:cyan;">/* Example to demonstrate use of reference operator in C programming. */<br><br>
+#include < stdio.h><br>
+int main()<br>
+{<br>
+  int var = 5;<br>
+  printf("Value: %d\n", var);<br>
+  printf("Address: %u", &var);<br
+    //Notice, the ampersand(&) before var.<br>
+  return 0;<br>
+}</span>
+</div>
+<h5>Output:</h5>
+<div class="output">
+	Value: 5 <br><br>
+Address: 2686778
+</div>
+<p><span style="color:#212121;"><strong>Note:</strong></span>You may obtain different value of address while using this code.<br><br>
+
+In above source code, value 5 is stored in the memory location 2686778. var is just the name given to that location.</p>
+<h4>Pointer Variable:</h4>
+<p>In C, there is a special variable that stores just the address of another variable. It is called Pointer variable or, simply, a pointer.<br><br> Declaration of Pointer</p>
+
+<div class="syntax">
+	data_type* pointer_variable_name;<br>
+int* p;
+</div>
+<h4>Dereference Operator:</h4>
+<p>As discussed, & is called reference operator. It gives you the address of a variable.<br><br>
+
+Likewise, there is another operator that gets you the value from the address, it is called a dereference operator (*).<br><br>
+
+Below example clearly demonstrates the use of pointers, reference operator and dereference operator.</p>
+
+<p><span style="color:#212121;">Note</span> The * sign when declaring a pointer is not a dereference operator. It is just a similar notation that creates a pointer.</p>
+
+<div class="syn">
+<span style="color:cyan;">	/* Source code to demonstrate, handling of pointers in C program */<br>
+#include < stdio.h ><br>
+int main(){<br>
+   int* pc;<br><br>
+   int c;<br>
+   c=22;<br>
+   printf("Address of c:%u\n",&c);<br>
+   printf("Value of c:%d\n\n",c);<br><br>
+   pc=&c;<br>
+   printf("Address of pointer pc:%u\n",pc);<br>
+   printf("Content of pointer pc:%d\n\n",*pc);<br><br>
+   c=11;<br>
+   printf("Address of pointer pc:%u\n",pc);<br>
+   printf("Content of pointer pc:%d\n\n",*pc);<br><br>
+   *pc=2;<br>
+   printf("Address of c:%u\n",&c);<br>
+   printf("Value of c:%d\n\n",c);<br>
+   return 0;<br>
+}</span>
+</div>
+<div class="output">
+	Address of c: 2686784<br>
+Value of c: 22<br><br>
+
+Address of pointer pc: 2686784<br>
+Content of pointer pc: 22<br><br>
+
+Address of pointer pc: 2686784<br>
+Content of pointer pc: 11<br><br>
+
+Address of c: 2686784<br>
+Value of c: 2<br>
+</div>
+
+<h5>Common Mistakes When Working With Pointers</h5>
+<p>Suppose you want pointer pc to point to the address of c . Then,</p>
+<div class="box">
+	
+int c, *pc;<br><br>
+
+// Wrong! pc is address whereas, c is not an address.<br>
+pc = c;  <br><br>
+
+// Wrong! *pc is the value pointed by address whereas, %amp;c is an address.<br>
+*pc = &c; <br><br>
+
+// Correct! pc is an address and, %amp;pc is also an address.<br>
+pc = &c; <br><br>
+
+// Correct! *pc is the value pointed by address and, c is also a value.<br>
+*pc = c;<br><br>
+</div>
+
+
+
+
+</body>
+</html>

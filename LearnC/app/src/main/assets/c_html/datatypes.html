@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body{
+		background-color: #eeeeee;
+	}
+		.im{
+			border-style: hidden;
+			border-radius: 50%;
+		}
+		.float{
+			background-color: #9e9e9e;
+		}
+		.data{
+			border-style: hidden;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+<h1>DataTypes & Variables-:</h1>
+<img class="im" src="images/rise.jpg" width="100%">
+
+<p>Data types in c refer to an extensive system used for declaring variables or functions of different types. The type of a variable determines how much space it occupies in storage and how the bit pattern stored is interpreted.</p>
+<h2>Classification</h2>
+<h5>Basic Types</h5>
+<p>They are arithmetic types and are further classified into: (a) integer types and (b) floating-point types</p>
+<h5>Enumerated Types</h5>
+<p>They are again arithmetic types and they are used to define variables that can only assign certain discrete integer values throughout the program.</p>
+<h5> The type Void</h5>
+<p>The type specifier <i>void</i> indicates that no value is available.</p>
+<h5>Derived Types</h5>
+<p>They include (a) Pointer types, (b) Array types, (c) Structure types, (d) Union types and (e) Function types.</p>
+<h3> Integer Types</h3>
+<div class="float">
+<p><B>Type</B> &emsp;&emsp;&emsp;&emsp;&emsp; <B>Bytes</B>&emsp;&emsp;&emsp;&emsp;<B>Range</B></p>
+<hr>
+ <p>char  &emsp; &emsp;&emsp;&emsp;&emsp;1Byte&emsp;&emsp;&emsp;&emsp;-128 to +127</p>
+<hr>
+<p>unsigned char &emsp; 1Byte&emsp;&emsp;&emsp;&emsp; 0 to 255</p>
+<hr>
+<p>signed char &emsp;&emsp;   2 or 4 Byte&emsp;&emsp;-128 to +127</p>
+<hr>
+<p>unsigned int &emsp;&emsp;2 or 4 Byte&emsp;&emsp; 0 to 65535</p>
+<hr>
+<p>short &emsp;&emsp;&emsp;&emsp;&emsp;2 Byte&emsp;&emsp;&emsp;    -32768 to +32767</p>
+<hr>
+<p>unsigned short &emsp;2 Byte&emsp;&emsp; &emsp;  0 to 65535</p>
+<hr>
+<p>long &emsp;&emsp;&emsp;&emsp;&emsp;4 Byte&emsp;&emsp;&emsp;-2147483648 to +2147483647</p>
+<hr>
+<p>unsigned long &emsp; 4 Byte&emsp;&emsp;&emsp;0 to 4294967295</p>
+<hr>
+</div>
+<h2>Floating-Point Types</h2>
+The following table provides the detail of floating-point integer types with their storage sizes and their precision
+<div class="float">
+<p>float&emsp;&emsp;&emsp;&emsp;4 Byte&emsp;&emsp;&emsp; 6 decimal precision</p>
+<hr>
+<p>double&emsp;&emsp;&emsp;8 Byte&emsp;&emsp;&emsp; 15 decimal precision</p>
+<hr>
+<p>long double&emsp;10 Byte &emsp;&emsp;&emsp;19 decimal precision</p>
+</div>
+ <h2>Void Types</h2>
+ The void type specifies that no value is available . It is used in three kinds of situations.
+ <h5>Function returns as void </h5>
+ <p>There are various functions in C which do no return any value or you can say that return void.
+ A function with no return value has the return type aas void. e.g.-  <b><i>void</i></b> sum(int i)</p>
+<h5>Function Parameter(arguments) as Void</h5>
+<p>There are various functions in C which do not accept any parameter. A function with no parameter can accept a void. e.g.- int sum(<b><i>void</i></b>)</p>
+<h5>Pointer to Void</h5>
+A pointer of type void * represents the address of an object , but not its type. for example , a memory allocation function void <b><i>*malloc(size_t size);</i></b> returns a pointer to void which can be casted to any data type.
+<img class="data" src="images/Data-Types.jpeg" width="100%">
+<h2>Variables</h2>
+<p>A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type,which determines the size and layout of the variable's memory. the range of values that an be stored within that memory. and the set of operations that can applied to the variable.</p>&emsp;&emsp;
+
+<div class="float">
+	<p>char &emsp;&emsp;Typically a single octet(one byte). This is an integer type.</p>
+	<hr>
+	<p>int &emsp;&emsp;&emsp;The most natural size of integer for the machine.</p>
+	<hr>
+	<p>float&emsp;&emsp;&emsp;A single-precision floating point value.</p>
+	<hr>
+	<p>double &emsp;&emsp;A double-precision floating point value.</p>
+	<hr>
+	<p>void&emsp;&emsp;&emsp;Represents the absence of type.</p>
+</div>
+<h2>Data Table-:</h2>
+ <img class="data" src="images/da.jpg" width="100%" height="300px">
+</body>
+</html>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>stack.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+.cpp1-assembler { background-color: #FFFFFF; color: #0000FF; }
+.cpp1-character { background-color: #FFFFFF; color: #000000; }
+.cpp1-comment { background-color: #FFFFFF; color: #3399FF; font-style: italic; }
+.cpp1-float { background-color: #FFFFFF; color: #800080; }
+.cpp1-hexadecimal { color: #800080; }
+.cpp1-identifier { color: #000000; }
+.cpp1-illegalchar { color: #000000; }
+.cpp1-number { color: #800080; }
+.cpp1-octal { color: #800080; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { background-color: #FFFFFF; color: #808000; font-weight: bold; }
+.cpp1-space { background-color: #FFFFFF; color: #000000; }
+.cpp1-string { color: #0000FF; font-weight: bold; }
+.cpp1-symbol { color: #FF0000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 11pt Courier New;"><span class="cpp1-comment">/*
+   ***************************  
+  Name: Learn c Programming  
+  Written by ~LoveRishi~
+   ***************************
+                               */
+</span><span class="cpp1-space">                               
+</span><span class="cpp1-preprocessor">#include &lt;stdio.h&gt;
+#define MAXSIZE 5
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> stack
+</span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> stk</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">MAXSIZE</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> top</span><span class="cpp1-symbol">;
+};
+</span><span class="cpp1-reservedword">typedef</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> stack STACK</span><span class="cpp1-symbol">;
+</span><span class="cpp1-identifier">STACK s</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> push</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">);
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space">  pop</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">);
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> display</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">void</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space"> 
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> main </span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> choice</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> option </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-symbol">-</span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space"> 
+    printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;STACK OPERATION\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">while</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">option</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;------------------------------------------\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;      1    --&gt;    PUSH               \n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;      2    --&gt;    POP               \n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;      3    --&gt;    DISPLAY               \n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;      4    --&gt;    EXIT           \n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;------------------------------------------\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space"> 
+        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter your choice\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        scanf    </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">choice</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">switch</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">choice</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            push</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">2</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            pop</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">3</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            display</span><span class="cpp1-symbol">();
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">break</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">case</span><span class="cpp1-space"> </span><span class="cpp1-number">4</span><span class="cpp1-symbol">:
+</span><span class="cpp1-space">            </span><span class="cpp1-reservedword">return</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">        fflush </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">stdin</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Do you want to continue(Type 0 or 1)?\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        scanf    </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">option</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+}
+</span><span class="cpp1-comment">/*  Function to add an element to the stack */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> push </span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> num</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">MAXSIZE </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">))
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Stack is Full\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">return</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter the element to be pushed\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        scanf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">num</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">stk</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top</span><span class="cpp1-symbol">]</span><span class="cpp1-space"> </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> num</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">return</span><span class="cpp1-symbol">;
+}
+</span><span class="cpp1-comment">/*  Function to delete an element from the stack */
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> pop </span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> num</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Stack is Empty\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        num </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">stk</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;poped element is = %dn&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">stk</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top</span><span class="cpp1-symbol">]);
+</span><span class="cpp1-space">        s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">return</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">num</span><span class="cpp1-symbol">);
+}
+</span><span class="cpp1-comment">/*  Function to display the status of the stack */
+</span><span class="cpp1-reservedword">void</span><span class="cpp1-space"> display </span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> </span><span class="cpp1-symbol">-</span><span class="cpp1-number">1</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Stack is empty\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">return</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n The status of the stack is \n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">for</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">top</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> i </span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;</span><span class="cpp1-space"> i</span><span class="cpp1-symbol">--)
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">            printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">stk</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">]);
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    printf </span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\n&quot;</span><span class="cpp1-symbol">);
+}
+</span></span>
+</code></pre>
+</body>
+</html>

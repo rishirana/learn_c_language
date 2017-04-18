@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<h2>Function Pointer</h2>
+<div class="box">
+	<i>In C, like normal data pointers (int *, char *, etc), we can have pointers to functions. Following is a simple example that shows declaration and function call using function pointer.</i>
+</div><br><br>
+<div class="syn">
+	<span style="color:#607d8b;">#include < stdio.h ><br>
+// A normal function with an int parameter<br>
+// and void return type<br><br>
+void fun(int a)<br>
+{<br>
+    printf("Value of a is %d\n", a);<br>
+}<br><br>
+ 
+int main()<br>
+{<br>
+    // fun_ptr is a pointer to function fun()<br><br> 
+    void (*fun_ptr)(int) = &fun;<br><br>
+ 
+   <span style="color:green;"> /* The above line is equivalent of following two
+       void (*fun_ptr)(int);
+       fun_ptr = &fun; 
+    */</span><br><br>
+ 
+    // Invoking fun() using fun_ptr<br>
+    (*fun_ptr)(10);<br><br>
+ 
+    return 0;<br>
+}
+</div>
+<p><strong>Output:</strong></p>
+<h4>Interesting facts about function pointers:</h4>
+<p>
+	&hearts;  Unlike normal pointers, a function pointer points to code, not data. Typically a function pointer stores the start of executable code.<br><br>
+	&hearts; Unlike normal pointers, we do not allocate de-allocate memory using function pointers.<br><br>
+	&hearts;  A function's name can also be used to get functions' address. For example, in the below program, we have removed address operator '&' in assignment. We have also changed function call by removing *, the program still works.<br><br>
+	<strong>Example:</strong>
+	<div class="syn">
+	<span style="color:#607d8b;">	#include < stdio.h ><br>
+// A normal function with an int parameter<br>
+// and void return type<br><br>
+void fun(int a)<br>
+{<br>
+    printf("Value of a is %d\n", a);<br>
+}<br><br>
+ 
+int main()<br>
+{ <br>
+    void (*fun_ptr)(int) = fun;  // & removed<br><br>
+ 
+    fun_ptr(10);  // * removed<br><br>
+ 
+    return 0;<br>
+}
+	</div><br><br>
+
+	&hearts; Like normal pointers, we can have an array of function pointers.<br><br>
+	&hearts; Like normal data pointers, a function pointer can be passed as an argument and can also be returned from a function.
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

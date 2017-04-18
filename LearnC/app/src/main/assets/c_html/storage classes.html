@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+
+<h2>Storage classes</h2>
+<p>In C language , each variable has a <small><strong>storage class</strong></small> which decides scopes , visibility and lifetime of that variable. The following storage classes are most oftenly used in C programming.</p>
+<ul type="circle">
+	<li><strong>Automatic variables</strong></li>
+	<li><strong>External variables</strong></li>
+	<li><strong>Register variables</strong></li>
+	<li><strong>Static variables</strong></li>
+</ul>
+<hr width="100%">
+<h3>Automatic Variables:</h3>
+<p>A variable declared inside a function without any storage class specification, is by default an <strong>automatic variable</strong> . They are created when a function is called and are destroyed <strong>automatically</strong> when the function exits. Automatic variables can also be called local variables because they are local to a function. By default they are assigned garbafe value by the compiler.</p>
+<div class="syntax">
+	void main(){<br>
+	int detail;<br>
+	or<br>
+	auto int detail; // Both are same<br>
+	}
+</div>
+<hr>
+<h3>External or Global Variable :</h3>
+<p>A variable that si declared outside any function is a <strong>Global variable.</strong> Global variables remain available throughout the entire program. One important thing to remember about global variable is that their values can be changed by any function in the program.</p>
+<div class="syntax">
+	int number;<br>
+	void main()<br>
+	{<br>
+	number = 10;<br>
+	}<br> 
+
+	function1()<br>
+	{<br>
+	number = 20;<br>
+	}<br>
+	function2()<br>
+	{<br>
+	number = 30;<br>
+	}
+</div>
+<p>Here the global variable <strong>number</strong> is available to all three functions.</p>
+<hr>
+<h3>Extern :</h3>
+<p>The <strong>extern </strong> keyword is used before a variable to inform the compiler that this variable is declared somewhere else. The <strong>extern</strong> declaration does not allocate storage for variables.</p>
+<strong>Problem when extern is not used</strong>
+<div class="syntax">
+	main()<br>
+	{<br>
+	a = 10; <span style="color:red;">//Error: cannot find variable a</span><br>
+	printf("%d",a);<br>
+	}
+</div>
+<hr>
+<strong>Example using extern in same file</strong>
+<div class="syntax">
+	main()<br>
+	{<br>
+	<small><strong>extern</strong></small> int x; //Tells compiler that it is defined somewhere else<br>
+	x = 10;<br>
+	printf("%d",x);<br>
+	}<br>
+	int x; //Global variable x<br>
+</div>
+<hr>
+<h3>Static variables</h3>
+<p> A <strong>static</strong> variable tells the compiler to persist the variable until the end of program. Instead of creating and destroying a variable every time when it comes into and goes out of scope , <strong>static</strong> is initialized only once and remains into existence till the end of program.</p>
+<p>A static Variable can either be internal or external depending upon the place of declaration. Scope of <strong>internal static variable</strong> remains inside the function in which it is defined. </p>
+<p><strong>External static variables</strong> remain restricted to scope of file in each they are declared.</p>
+<p>They are assigned <strong>0 (zero)</strong> as default balue by the compiler. </p>
+<div class="syntax">
+	void test();  <span style="color:blue;">//Function declaration </span><br>
+	main()<br>
+	{<br>
+	test();<br>
+	test();<br>
+	test();<br>
+	}<br>
+	void test()<br>
+	{<br>
+	<strong>static</strong> int a = 0;<br> 
+	a = a+1;<br>
+	printf("%d",a);<br>
+	}
+</div>
+<h3>Register variable:</h3>
+<p><strong>Register</strong> variable inform the compiler to store the variable in register instead of memory.</p>
+<p><strong>Register</strong> variable has fasterr access than normal variable. Frequently used variables are kept in register. Only few variables can be placed inside register.</p>
+<p><strong style="color:red;">NOTE :</strong> We can never get the address of such variables.</p>
+<h4>syntax:</h4>
+<div class="syntax">
+	register int number;
+</div>
+</body>
+</html>

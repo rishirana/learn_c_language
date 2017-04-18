@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<h2>String</h2>
+<div class="box">
+<i>Group of characters can be stored in character array. String in c language is an array of character that is terminated by \0 (null character)</i>
+	
+</div>
+<h3><u>Declaration:</u></h3>
+<p>There are <strong>two</strong> ways to declare string in C language.</p>
+<ol>
+	<li>By char array</li>
+	<li>By string literal</li>
+
+</ol>
+<h4>string by char array</h4>
+<strong><i>Syntax:</i></strong>
+<div class="syntax">
+	char ch[] = {'h','e','l','l','o','\0'};
+</div><br>
+<div class="box">
+	Note:<br>
+	&star; Declaring string size is not mandatory.
+</div>
+<h4>string by string literal</h4>
+<strong><i>Syntax:</i></strong><br>
+<div class="syntax">
+	char ch[] = "hello";
+</div><br>
+<div class="box">
+	Note:<br>
+	&star; '\0' is not necessary . C inserts the null character automatically.<br>
+	&star; The %s is used to print string in C language.
+</div>
+<h4>Example of String :</h4>
+<iframe src="program/string.html" width="100%" height="310px"></iframe>
+<h4>Output:</h4>
+<div class="output">
+	Character value is : h<br>
+	Char Array Value is : hello<br>
+	String Literal Value is : hello<br><br>
+</div>
+<h4>Example of gets and puts function :</h4>
+<iframe src="program/puts and gets.html" width="100%" seamless="seamless" height="270px"></iframe>
+<h4>Output:</h4>
+<div class="output">
+	Enter name :  hello<br>
+	Your Name is : hello<br>
+</div>
+<h4>Passing String to Function</h4>
+<iframe src="program/passing string to function.html" width="100%" seamless="seamless" height="430px"></iframe>
+<h4>Output:</h4>
+<div class="output">
+	Enter String :  loveRishi<br>
+	String is : loveRishi<br>
+</div>
+</body>
+</html>

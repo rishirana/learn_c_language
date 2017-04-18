@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body>
+<h2>Union</h2>
+<div class="box">
+	<I>Unions are quite similar to structures in C. Like structures, unions are also derived types. The only difference is in storage. In structure each member has its own storage location , whereas all members of union uses a single shared memory location which is equal to largest data member.</I>
+</div>
+<h5>Declaration:</h5>
+<P>Union variables can be created in similar manner as structure variables. It is declared using <strong>union</strong>keyword.</P>
+<div class="syntax">
+	<b>union</b> car<br>
+{<br>
+  char name[50];<br>
+  int price;<br>
+};
+</div><br>
+<center>Or</center>
+<div class="syntax">
+	<strong>union</strong> car<br>
+{<br>
+  char name[50];<br>
+  int price;<br>
+};<br>
+
+int main()<br>
+{<br>
+  <strong>union</strong> car car1, car2, *car3;<br>
+  return 0;<br>
+}
+</div>
+<h4>Accessing member of union:</h4>
+<p>Again, the member of unions can be accessed in similar manner as structures.<br><br>
+
+In the above example, suppose you want to access price for union variable car1, it can be accessed as:</p>
+
+<div class="syntax">
+	car1.price;
+</div>
+<p>Likewise, if you want to access price for the union pointer variable car3, it can be accessed as:</p>
+<div class="syntax">
+	(*car3).price<br>
+   or<br>
+car3->price
+</div>
+<h4>Difference between Union & Structure:</h4>
+<iframe src="program/union difference.html" width="100%" height="450px"></iframe>
+<h5><i>Output:</i></h5>
+<div class="output">
+	size of union = 32<br><br>
+size of structure = 40
+</div>
+
+
+
+</body>
+</html>

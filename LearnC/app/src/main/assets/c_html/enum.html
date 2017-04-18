@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body>
+<h2>Enum (Enumerated)</h2>
+<div class="box">
+	<i>It is an User Defined datatype. </i>
+</div>
+<h4>Syntax:</h4>
+<div class="syntax">
+	enum identifier {value1, value2,.... Value n};
+</div>
+<ul>
+	  <li>  enum is <u><strong>Enumerated Data Type</strong></u></li>.
+   <li> enum is <u><strong>user defined data type</strong></u></li>
+    <li>In the above example <u><strong>"identifier"</strong></u> is nothing but the <u><strong>user defined data type.</strong></u></li>
+   <li> Value1,Value2,Value3... etc creates <u><strong>one set of enum values.</strong></u></li>
+    <li>Using <u><strong>identifier</strong></u> we are creating our variables.</li>
+</ul>
+<img src="images/enum.jpg" width="100%" alt="enum">
+<h5>Example:</h5>
+<div class="syntax">
+	enum month {JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,
+	<br>OCT,DEC};<br>
+enum month rmonth;
+</div>
+<h5>Explanation:</h5>
+<ol>
+	 <li>First Line Creates <u>"User Defined Data Type"</u> called month.</li>
+    <li>It has 12 values as given in the <u>pair of braces.</u></li>
+    <li>In the second line <u>rmonth</u> variable is declared of type "month" which can be initialized with any "data value amongst 12 values".
+</ol>
+<div class="syntax">
+	rmonth = FEB;
+</div>
+<ol>
+	    <li>Default Numeric value assigned to first enum value is "0".</li>
+    <li>Numerically JAN is given value "0".</li>
+    <li>FEB is given value "1".</li>
+    <li>MAR is given value "2".</li>
+    <li>APR is given value "3".</li>
+    <li>MAY is given value "4".</li>
+    <li>JUN is given value "5".</li>
+    <li>and so on...</li>
+</ol>
+<div class="syntax">
+	printf("%d",rmonth);
+</div>
+<p>
+	&check; It will Print "1" on the screen because "Numerical Equivalent" of  "FEB" is 1 and "rmonth" is initialized by "FEB".<br><br>
+	&check; Generally Printing Value of enum variable is as good as printing "Integer".
+</p>
+<iframe src="program/enum.html" width="100%" height="210px"></iframe>
+<h5><i>Output:</i></h5>
+<div class="output">
+	01234567891011
+</div>
+
+
+
+
+
+</body>
+</html>

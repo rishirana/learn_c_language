@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body{
+		background-color: #f5f5f5;
+	}
+		.cont{
+			 
+			background-color: #9e9e9e;
+		}
+		.cont,p{
+			padding: 7px;
+		}
+		.syntax{
+			background-color: #424242;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<h1><u>Switch</u></h1>
+<div class="cont">
+	<p><b>Switch</b> statements are also used when we need our program to make a certain decision based on a condition and then execute accordingly.</p>
+</div>
+<h3><u>Syntax:</u></h3>
+<div class="syntax">
+	<p>
+		switch(variable)<br>{<br>&emsp;&emsp;case a-constant-expression :<br> &emsp;&emsp;&emsp;// code to execute if variable == a-constant-expression<br>&emsp;&emsp;&emsp;break;<br>&emsp;&emsp;case b-constant-expression :<br> &emsp;&emsp;&emsp;// code to execute if variable == b-constant-expression<br>&emsp;&emsp;&emsp;break;<br>.<br>.<br>.<br>&emsp;&emsp;case n-constant-expression : <br> &emsp;&emsp;&emsp;// code to execute if variable == n-constant-expression<br>&emsp;&emsp;&emsp;break;<br>&emsp;&emsp;default :<br> &emsp;&emsp;&emsp;// code to execute if variable does not equal to the value following any of the cases<br>}
+	</p>
+</div>
+<h3><u>Rules</u></h3>
+<ol>
+	<li>The <b><u>variable</u></b> used in <b>switch</b> statement must have an integral or enumerated type,or be of a class type in which the class has a single conversion function to an integral or enumerated type.</li><br>
+	<li>You can have any number of case statements within a switch. each case is followed by the value to be compared to and a colon.</li><br>
+	<li>The <b>constant-expression </b> for a case must be the same data type as the variable in the switch,and it must be constant or a literal.</li><br>
+	<li>when the variable being switched on is equal to a case , the statements following that case will execute until a <b><i>break</i></b> statement is reached.</li><br>
+	<li>When a <b>break</b> statement is reached , the switch terminates , and the flow of control jumps to the next line following the switch statement.</li><br>
+	<li>Not every case needs to contain a <i>break</i> . If no <i>break</i> appears , the flow of control will fall through to subsequent cases until a break is reached</li><br>
+	<li>A <i>switch</i> statement can have an  optional <i>default</i> case, which must appear at the end of the switch. The default case can be used for performing a task when none of the case is true . No <i>break</i> is needed in the default case.</li><br>
+</ol>
+</body>
+</html>

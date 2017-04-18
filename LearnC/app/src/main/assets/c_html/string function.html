@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+<h2>String Function</h2>
+<p>Strings are often needed to be manipulated by programmer according to the need of a problem. </p>
+<p>All <small><strong>String</strong></small> manipulation can be done manually by the programmer but , this makes programming complex and large. To solve this, the C supports a large number of string handling functions.</p>
+
+<p>There are numerous functions defined in <small><strong>"string.h"</strong></small> header file. Few commonly used string handling functions are discussed below:</p>
+<table>
+	<tr>
+		<th>Function </th>
+		<th>Work of Function</th>
+	</tr>
+	<tr>
+		 <td>strlen()</td>
+		 <td>Calculates the length of string</td>
+	</tr>
+	<tr>
+		 <td>strcpy()</td>
+		 <td>Copies a string to another string</td>
+	</tr>
+	<tr>
+		 <td>strcat()</td>
+		 <td>Concatenates two strings</td>
+	</tr>
+	<tr>
+		 <td>strcmp()</td>
+		 <td>Compares two string</td>
+	</tr>
+	<tr>
+		 <td>strlwr()</td>
+		 <td>Converts string to lowercase</td>
+	</tr>
+	<tr>
+		 <td>strupr()</td>
+		 <td>Converts string to uppercase</td>
+	</tr>
+</table>
+<p>String handling functions are defined under <small><strong>"string.h"</strong></small> header file i.e. you have to include the code below to run string handling functions.</p>
+<div class="syntax">
+<small>#include<</small><small>string.h></small>
+</div>
+<h3>Strlen() :</h3>
+<div class="state">
+	<i>The strlen() function returns the length of the given string. It doesn't count null character '\0'</i>
+</div>
+<br>
+<strong>Syntax:</strong><br>
+<div class="syntax">
+	strlen(string_name)
+</div><br>
+<strong>Example:<br></strong>
+<iframe src="program/strlen.html" width="100%" height="210px"></iframe>
+<div class="output">
+	Length of String is : 5;
+</div>
+<br><br>
+<hr>
+<h3>Strcpy() :</h3>
+<div class="state">
+	<i>The <strong>strcpy(destination,source)</strong> function copies the source string in destination.</i> 
+</div>
+<h5>Syntax:</h5>
+<div class="syntax">
+	strcpy(destination , source)
+</div>
+<h5>Example:</h5>
+<iframe src="program/strcpy.html" width="100%" height="250px"></iframe>
+<h5>Output:</h5>
+<div class="output">
+	Value of destination string is : hello
+</div><br><br>
+<hr>
+
+
+<h3>Strcat() :</h3>
+<div class="state">
+	<i>The <strong>strcat(first_string,second_string)</strong> function concatenates two strings and result is returned to first_string.</i> 
+</div>
+<h5>Syntax:</h5>
+<div class="syntax">
+	strcpy(first_string , second_string)
+</div>
+<h5>Example:</h5>
+<iframe src="program/strcat.html" width="100%" height="250px"></iframe>
+<h5>Output:</h5>
+<div class="output">
+	Value of first string is : hello world
+</div><br><br><hr>
+
+
+<h3>Strcmp() :</h3>
+<div class="state">
+	<i>The <strong>strcmp(first_string,second_string)</strong> function compares two strings.</i> 
+</div>
+<h5>Syntax:</h5>
+<div class="syntax">
+	strcmp(first_string , second_string)
+</div>
+<h5>Example:</h5>
+<iframe src="program/strcmp.html" width="100%" height="369px"></iframe>
+ <br><br><hr>
+
+<h3>Strlwr() :</h3>
+<div class="state">
+	<i>The <strong>strlwr()</strong> function converts all the uppercase characters in that string to lowercase characters and leaves the lowercase characters as it is.</i> 
+</div>
+<h5>Syntax:</h5>
+<div class="syntax">
+	strlwr(string_name)
+</div>
+<h5>Example:</h5>
+<iframe src="program/strlwr.html" width="100%" height="258px"></iframe>
+<h5>Output:</h5>
+<div class="output">
+	lower case
+</div><br><br><hr>
+
+<h3>Strupr() :</h3>
+<div class="state">
+	<i>The <strong>strupr()</strong> function converts all the lowercase characters in that string to uppercase characters and leaves the uppercase characters as it is.</i> 
+</div>
+<h5>Syntax:</h5>
+<div class="syntax">
+	strupr(string_name)
+</div>
+<h5>Example:</h5>
+<iframe src="program/strupr.html" width="100%" height="256px"></iframe>
+<h5>Output:</h5>
+<div class="output">
+	UPPER CASE
+</div>
+</body>
+</html>

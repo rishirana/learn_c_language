@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>simple structure.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+.cpp1-assembler { background-color: #FFFFFF; color: #0000FF; }
+.cpp1-character { background-color: #FFFFFF; color: #000000; }
+.cpp1-comment { background-color: #FFFFFF; color: #3399FF; font-style: italic; }
+.cpp1-float { background-color: #FFFFFF; color: #800080; }
+.cpp1-hexadecimal { color: #800080; }
+.cpp1-identifier { color: #000000; }
+.cpp1-illegalchar { color: #000000; }
+.cpp1-number { color: #800080; }
+.cpp1-octal { color: #800080; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { background-color: #FFFFFF; color: #808000; font-weight: bold; }
+.cpp1-space { background-color: #FFFFFF; color: #000000; }
+.cpp1-string { color: #0000FF; font-weight: bold; }
+.cpp1-symbol { color: #FF0000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 11pt Courier New;"><span class="cpp1-comment">/*
+   ***************************  
+  Name: Learn c Programming  
+  Written by ~LoveRishi~
+   ***************************
+                               */
+</span><span class="cpp1-space">                               
+                               
+ 
+</span><span class="cpp1-preprocessor">#include &lt;stdio.h&gt;
+
+</span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> student</span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">char</span><span class="cpp1-space"> name</span><span class="cpp1-symbol">[</span><span class="cpp1-number">50</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> rollno</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">	</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> marks</span><span class="cpp1-symbol">;
+};
+</span><span class="cpp1-space">  
+  </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> main</span><span class="cpp1-symbol">(){
+</span><span class="cpp1-space">  	</span><span class="cpp1-reservedword">struct</span><span class="cpp1-space"> student s</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">  	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter information of students:\n\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter Name:&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%s&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">name</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter Rollno:&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,&amp;</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">rollno</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter Marks:&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%f&quot;</span><span class="cpp1-symbol">,&amp;</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">marks</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	
+  	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Displaying information\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Name : %s\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">name</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Rollno : %d\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">rollno</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Marks : %.2f\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-identifier">s</span><span class="cpp1-symbol">.</span><span class="cpp1-identifier">marks</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">  	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">  </span><span class="cpp1-symbol">}
+
+</span></span>
+</code></pre>
+
+<h5>Output:</h5>
+<div style="background:#0e0e0e; color:#ddd; padding:5px;">
+	Enter information of students:<br><br>
+
+Enter Name:loverishi<br>
+Enter Rollno:1<br>
+Enter Marks:90<br><br>
+Displaying information<br>
+Name : loverishi<br>
+Rollno : 1<br>
+Marks : 90.00
+</div>
+</body>
+</html>

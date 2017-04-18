@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+</head>
+<body>
+<h2>Nesting of Structure</h2>
+<p>
+	&check; Structure written inside another structure is called as nesting of two structures.<br>
+	&check; Nested Structures are allowed in C Programming Language.<br>
+	&check; We can write one Structure inside another structure as member of another structure.<br>
+</p>
+
+<h4>Way1: Declare two separate Structure</h4>
+<div class="syn">
+	<span class="strct">struct</span> <span style="color:pink;">date</span><br>
+<span class="braces">{</span><br>
+   <span class="datatype">int</span> <span class="variable">date;</span><br>
+   <span class="datatype">int</span> <span class="variable">month;</span><br>
+   <span class="datatype">int</span> <span class="variable">year;</span> <br>
+<span class="braces">};</span><br><br>
+
+<span class="strct">struct</span> <span style="color:pink;">Employee</span><br>
+<span class="braces">{</span><br>
+   <span class="datatype">char</span> <span class="variable">ename[20];</span><br>
+   <span class="datatype">int</span> <span class="variable">ssn;</span><br>
+   <span class="datatype">float</span> <span class="variable">salary;</span><br> 
+   <span class="strct">struct</span> <span style="color:pink;">date</span> <span class="variable">doj;</span><br>
+<span class="braces">}emp1;</span>
+</div>
+<h4>Accessing Nested  Elements:</h4>
+
+ <ol>
+ 	<li>Structure members are accessed using <b>dot operator.</b></li>
+ 	<li> <strong>date</strong> structure is nested within Employee Structure.</li>
+ 	<li>Members of the 'date' can be accessed using <strong>employee</strong> </li>
+ 	<li><strong>emp1 & doj</strong> are two structure names (Variables)</li>
+ </ol>
+
+<h5>Explanation:</h5>
+<div class="state">
+	Accessing Month Field :  emp1.doj.month <br>  
+Accessing day Field   :  emp1.doj.day <br> 
+Accessing year Field  :  emp1.doj.year<br>
+</div>
+
+<h4>Way2: Declare Embedded strutures</h4>
+<div class="syn">
+	
+<span class="strct">struct</span> <span style="color:pink;">Employee</span><br>
+<span class="braces">{</span><br>
+   <span class="datatype">char</span> <span class="variable">ename[20];</span><br>
+   <span class="datatype">int</span> <span class="variable">ssn;</span><br>
+   <span class="datatype">float</span> <span class="variable">salary;</span><br> 
+   &emsp;	<span class="strct">struct</span> <span style="color:pink;">date</span><br>
+&emsp;<span class="braces">{</span><br>
+   &emsp;&emsp;<span class="datatype">int</span> <span class="variable">date;</span><br>
+   &emsp;&emsp;<span class="datatype">int</span> <span class="variable">month;</span><br>
+   &emsp;&emsp;<span class="datatype">int</span> <span class="variable">year;</span> <br>
+&emsp;<span class="braces">}doj;</span><br><br>
+   
+   <span class="braces">}emp1;</span>
+</div>
+<h5>Accessing Nested Member:</h5>
+<div class="state">
+	Accessing Month Field :  emp1.doj.month<br>   
+Accessing day Field   :  emp1.doj.day <br> 
+Accessing year Field  :  emp1.doj.year<br>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

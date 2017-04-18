@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>binary multiplication.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #FFFFFF; }
+.cpp1-assembler { background-color: #FFFFFF; color: #0000FF; }
+.cpp1-character { background-color: #FFFFFF; color: #000000; }
+.cpp1-comment { background-color: #FFFFFF; color: #3399FF; font-style: italic; }
+.cpp1-float { background-color: #FFFFFF; color: #800080; }
+.cpp1-hexadecimal { color: #800080; }
+.cpp1-identifier { color: #000000; }
+.cpp1-illegalchar { color: #000000; }
+.cpp1-number { color: #800080; }
+.cpp1-octal { color: #800080; }
+.cpp1-preprocessor { color: #008000; }
+.cpp1-reservedword { background-color: #FFFFFF; color: #808000; font-weight: bold; }
+.cpp1-space { background-color: #FFFFFF; color: #000000; }
+.cpp1-string { color: #0000FF; font-weight: bold; }
+.cpp1-symbol { color: #FF0000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 11pt Courier New;"><span class="cpp1-comment">/*
+   ***************************  
+  Name: Learn c Programming  
+  Written by ~LoveRishi~
+   ***************************
+                               */
+</span><span class="cpp1-preprocessor">#include &lt;stdio.h&gt;
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> binaryproduct</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">int</span><span class="cpp1-symbol">);
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> main</span><span class="cpp1-symbol">()
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">long</span><span class="cpp1-space"> binary1</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> binary2</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> multiply </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> digit</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> factor </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter the first binary number: &quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%ld&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">binary1</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Enter the second binary number: &quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%ld&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">binary2</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">while</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">binary2 </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        digit </span><span class="cpp1-symbol">=</span><span class="cpp1-space">  binary2 </span><span class="cpp1-symbol">%</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">digit </span><span class="cpp1-symbol">==</span><span class="cpp1-space"> </span><span class="cpp1-number">1</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">            binary1 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> binary1 </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> factor</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">            multiply </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> binaryproduct</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">binary1</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> multiply</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">else
+</span><span class="cpp1-space">        binary1 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> binary1 </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> factor</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        binary2 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> binary2 </span><span class="cpp1-symbol">/</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        factor </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Product of two binary numbers: %ld&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> multiply</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+}
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> binaryproduct</span><span class="cpp1-symbol">(</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> binary1</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> binary2</span><span class="cpp1-symbol">)
+{
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> i </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> remainder </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> sum</span><span class="cpp1-symbol">[</span><span class="cpp1-number">20</span><span class="cpp1-symbol">];
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> binaryprod </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">while</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">binary1 </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-space"> </span><span class="cpp1-symbol">||</span><span class="cpp1-space"> binary2 </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        sum</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++]</span><span class="cpp1-space"> </span><span class="cpp1-symbol">=(</span><span class="cpp1-identifier">binary1 </span><span class="cpp1-symbol">%</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-space"> </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> binary2 </span><span class="cpp1-symbol">%</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-space"> </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> remainder</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">%</span><span class="cpp1-space"> </span><span class="cpp1-number">2</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        remainder </span><span class="cpp1-symbol">=(</span><span class="cpp1-identifier">binary1 </span><span class="cpp1-symbol">%</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-space"> </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> binary2 </span><span class="cpp1-symbol">%</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-space"> </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> remainder</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">/</span><span class="cpp1-space"> </span><span class="cpp1-number">2</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        binary1 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> binary1 </span><span class="cpp1-symbol">/</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        binary2 </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> binary2 </span><span class="cpp1-symbol">/</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">remainder </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">        sum</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">++]</span><span class="cpp1-space"> </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> remainder</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">--</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">while</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">i </span><span class="cpp1-symbol">&gt;=</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">)
+</span><span class="cpp1-space">        binaryprod </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> binaryprod </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-number">10</span><span class="cpp1-space"> </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> sum</span><span class="cpp1-symbol">[</span><span class="cpp1-identifier">i</span><span class="cpp1-symbol">--];
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> binaryprod</span><span class="cpp1-symbol">;
+}
+</span></span>
+</code></pre>
+<h5>Output:</h5>
+<div style="background:#0e0e0e; color:#ddd; padding:5px;">
+	 Enter the first binary number: 1010<br>
+Enter the second binary number: 1010<br>
+Product of two binary numbers: 1100100<br>
+</div>
+</body>
+</html>
